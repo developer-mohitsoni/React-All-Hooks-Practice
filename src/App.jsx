@@ -3,7 +3,8 @@
 // import UseContextHook from "./components/UseContextHook";
 // import ComponentOne from "./components/ComponentOne";
 // import ComponentTwo from "./components/ComponentTwo";
-import UseReducer from "./components/UseReducer";
+// import UseReducer from "./components/UseReducer";
+import UseRefHook from "./components/UseRefHook";
 
 const App = () => {
   return (
@@ -32,7 +33,10 @@ const App = () => {
           <ComponentOne />
           <ComponentTwo />
         </div> */}
-        <UseReducer />
+
+        {/* <UseReducer /> */}
+
+        <UseRefHook />
       </div>
     </>
   );
