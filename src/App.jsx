@@ -1,14 +1,16 @@
 // import UseStateHook from "./components/useStateHook";
 // import UseEffectHook from "./components/useEffectHook";
-import UseContextHook from "./components/UseContextHook";
-import ComponentOne from "./components/ComponentOne";
-import ComponentTwo from "./components/ComponentTwo";
+// import UseContextHook from "./components/UseContextHook";
+// import ComponentOne from "./components/ComponentOne";
+// import ComponentTwo from "./components/ComponentTwo";
+import UseReducer from "./components/UseReducer";
 
 const App = () => {
   return (
     <>
       {/* <UseStateHook/> */}
       {/* <UseEffectHook/> */}
+      {/* <UseContextHook/> */}
       <div
         className="App"
         style={{
@@ -19,7 +21,7 @@ const App = () => {
           alignItems: "center",
         }}
       >
-        <UseContextHook />
+        {/* <UseContextHook />
         <div
           style={{
             display: "flex",
@@ -29,7 +31,8 @@ const App = () => {
         >
           <ComponentOne />
           <ComponentTwo />
-        </div>
+        </div> */}
+        <UseReducer />
       </div>
     </>
   );
