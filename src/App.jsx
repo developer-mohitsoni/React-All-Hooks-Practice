@@ -5,7 +5,8 @@
 // import ComponentTwo from "./components/ComponentTwo";
 // import UseReducer from "./components/UseReducer";
 // import UseRefHook from "./components/UseRefHook";
-import UseLayoutEffect from "./components/UseLayoutEffect";
+// import UseLayoutEffect from "./components/UseLayoutEffect";
+import UseMemoHook from "./components/UseMemoHook";
 
 const App = () => {
   return (
@@ -39,7 +40,9 @@ const App = () => {
 
         {/* <UseRefHook /> */}
 
-        <UseLayoutEffect />
+        {/* <UseLayoutEffect /> */}
+
+        <UseMemoHook />
       </div>
     </>
   );
