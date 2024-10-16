@@ -1,35 +1,38 @@
 import { useEffect, useState } from "react";
 
 const UseEffectHook = () => {
-  const [count, setCount] = useState(0);
+//   const [count, setCount] = useState(0);
 
-  const [showText, setShowText] = useState(false);
+  const [productList, setProductList] = useState([]);
+
+  const fetchAllProducts = async () => {
+    try {
+      const response = await fetch("https://dummyjson.com/products");
+      const data = await response.json();
+
+      if (data && data.products) {
+        setProductList(data.products);
+      }
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
 
   useEffect(() => {
-    console.log("Run only once");
+    fetchAllProducts();
   }, []);
 
-  //   useEffect(() => {
-  //     console.log("Render Every time");
-  //   });
-
-  useEffect(() => {
-    if (count === 5) {
-      setShowText(true);
-    }
-  }, [count]);
   return (
     <div>
-      <h1>UseEffect Hook</h1>
-      <h2>Count is: {count}</h2>
-      {showText ? <p>Hello World</p> : null}
-      <button
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Count
-      </button>
+      <ul>
+        {productList && productList.length > 0 ? (
+          productList.map((item) => {
+            return <li key={item.id}>{item.title}</li>;
+          })
+        ) : (
+          <li>No products found</li>
+        )}
+      </ul>
     </div>
   );
 };
