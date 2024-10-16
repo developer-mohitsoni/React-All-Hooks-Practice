@@ -6,7 +6,8 @@
 // import UseReducer from "./components/UseReducer";
 // import UseRefHook from "./components/UseRefHook";
 // import UseLayoutEffect from "./components/UseLayoutEffect";
-import UseMemoHook from "./components/UseMemoHook";
+// import UseMemoHook from "./components/UseMemoHook";
+import UseCallbackHook from "./components/UseCallbackHook";
 
 const App = () => {
   return (
@@ -42,7 +43,9 @@ const App = () => {
 
         {/* <UseLayoutEffect /> */}
 
-        <UseMemoHook />
+        {/* <UseMemoHook /> */}
+
+        <UseCallbackHook />
       </div>
     </>
   );
