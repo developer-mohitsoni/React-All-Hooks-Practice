@@ -1,9 +1,11 @@
-import UseStateHook from "./components/useStateHook";
+// import UseStateHook from "./components/useStateHook";
+import UseEffectHook from "./components/useEffectHook";
 
 const App = () => {
   return (
     <>
-      <UseStateHook />
+      {/* <UseStateHook /> */}
+      <UseEffectHook />
     </>
   );
 };
