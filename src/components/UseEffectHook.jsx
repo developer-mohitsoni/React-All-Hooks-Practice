@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const UseEffectHook = () => {
-//   const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0);
 
   const [productList, setProductList] = useState([]);
 
@@ -19,11 +19,25 @@ const UseEffectHook = () => {
   };
 
   useEffect(() => {
-    fetchAllProducts();
+    // fetchAllProducts();
+
+    return () => {
+      // clean up
+    };
   }, []);
+
+  useEffect(() => {
+    if (count === 5) {
+      fetchAllProducts();
+    }
+    if (count > 5) {
+      setProductList([]);
+    }
+  }, [count]);
 
   return (
     <div>
+      <h1>Count: {count}</h1>
       <ul>
         {productList && productList.length > 0 ? (
           productList.map((item) => {
@@ -33,6 +47,14 @@ const UseEffectHook = () => {
           <li>No products found</li>
         )}
       </ul>
+
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        Increase Count
+      </button>
     </div>
   );
 };
