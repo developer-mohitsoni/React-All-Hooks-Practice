@@ -4,7 +4,8 @@
 // import ComponentOne from "./components/ComponentOne";
 // import ComponentTwo from "./components/ComponentTwo";
 // import UseReducer from "./components/UseReducer";
-import UseRefHook from "./components/UseRefHook";
+// import UseRefHook from "./components/UseRefHook";
+import UseLayoutEffect from "./components/UseLayoutEffect";
 
 const App = () => {
   return (
@@ -36,7 +37,9 @@ const App = () => {
 
         {/* <UseReducer /> */}
 
-        <UseRefHook />
+        {/* <UseRefHook /> */}
+
+        <UseLayoutEffect />
       </div>
     </>
   );
