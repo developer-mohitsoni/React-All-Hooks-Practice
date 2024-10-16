@@ -7,7 +7,8 @@
 // import UseRefHook from "./components/UseRefHook";
 // import UseLayoutEffect from "./components/UseLayoutEffect";
 // import UseMemoHook from "./components/UseMemoHook";
-import UseCallbackHook from "./components/UseCallbackHook";
+// import UseCallbackHook from "./components/UseCallbackHook";
+import UseFetchHookTest from "./components/useFetchCustom";
 
 const App = () => {
   return (
@@ -45,7 +46,9 @@ const App = () => {
 
         {/* <UseMemoHook /> */}
 
-        <UseCallbackHook />
+        {/* <UseCallbackHook /> */}
+
+        <UseFetchHookTest />
       </div>
     </>
   );
